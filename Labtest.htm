@@ -1,0 +1,57 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta http-equiv="Content-Type" content=" text/html; charset=utf-8 " >
+    <script type="text/javascript">
+      function changeImg(imgID) {
+  if (imgID == 1) {
+      document.getElementById("img").src = 'P1.jpg';
+      document.getElementById("photo").value = 'P1.jpg';
+  } else if (imgID == 2) {
+      document.getElementById("img").src = 'P2.jpg';
+      document.getElementById("photo").value = 'P2.jpg';
+  } else if (imgID == 3) {
+      document.getElementById("img").src = 'P3.jpg';
+      document.getElementById("photo").value = 'P3.jpg';
+  } else if (imgID == 4) {
+      document.getElementById("img").src = 'P4.jpg';
+      document.getElementById("photo").value = 'P4.jpg';
+  } else if (imgID == 5) {
+      document.getElementById("img").src = 'P5.jpg';
+      document.getElementById("photo").value = 'P5.jpg';
+  }
+  else if (imgID == 0) {
+  document.getElementById("img").src = 'BG.jpg';
+      document.getElementById("photo").value = 'BG.jpg';}
+  
+}
+
+    </script>
+     <script src="sss.js"></script>
+     
+</head>
+<body>
+<table width="90%" align="center"><script src="showData.js"></script>
+    <form name="myForm" action="edit.php" method="post" autocomplete="on" enctype="multipart/form-data">
+    <tr width="20%">
+        <td><img src="P1.jpg" alt="" width="40%"  onclick="changeImg(1)"><br>
+            </td>
+        <td align="center"><H1><b>ข้อมูลนักศึกษา</b></H1></td>
+    </tr>
+    <tr>
+        <td><img src="P2.jpg" alt=""  width="40%" onclick="changeImg(2)"><br>
+            <img src="P3.jpg" alt=""  width="40%" onclick="changeImg(3)"><br>
+            <img src="P4.jpg" alt=""  width="40%" onclick="changeImg(4)"><br>
+            <img src="P5.jpg" alt=""  width="40%" onclick="changeImg(5)"><br></td>
+        <td  valign="top" ><br><br><h2>รหัสนักศึกษา <input id="id" type="text" name="id" maxlength="15" size="30" onchange="searchName(this.value)" /><br><br></h2>
+            <h2>ชื่อนักศึกษา <input id="name" type="text" name="name" maxlength="15"size="30"/></h2><br><br>
+            <h2>อายุ <input id="age" type="number" name="age" max="80" min="0"size="30"/></h2><br><br>
+            <h2>ชื่อรูปภาพ <input id="photo" type="text" name="photo" maxlength="15"size="30"/></h2><br><br>  
+            <input type="submit" name="Save" value="Save"> <input type="reset" name="Cancel" value="Cancel" onclick="changeImg(0)"></td>
+          
+        <td valign="top"><br><br><br><br><img id="img" src="BG.jpg" alt="" width="70%" ></h2></td>
+    </tr>
+    </form>
+</table>
+</body>
+    </html>
